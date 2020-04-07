@@ -39,9 +39,9 @@
           </button>
         </div>
         <ul class="promo-slider__bullets">
-          <li class="promo-slider__bullet">1</li>
-          <li class="promo-slider__bullet">2</li>
-          <li class="promo-slider__bullet">3</li>
+          <li class="promo-slider__bullet"> <input type="radio" name="slide" value="slide-1">1</li>
+          <li class="promo-slider__bullet"> <input type="radio" name="slide" value="slide-2">2</li>
+          <li class="promo-slider__bullet"> <input type="radio" name="slide" value="slide-3">3</li>
         </ul>
       </div>
     </section>
@@ -83,9 +83,9 @@
           <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
           <p class="text-bold text-up">Выполняем заказы на разработку:</p>
           <ul class="list">
-            <li class="list__itam">Веб-сайтов любой сложности</li>
-            <li class="list__itam">Мобильных приложений для iOS и Android</li>
-            <li class="list__itam">Слайдшоу и видео для корпоративных презентаций</li>
+            <li class="list__item">Веб-сайтов любой сложности</li>
+            <li class="list__item">Мобильных приложений для iOS и Android</li>
+            <li class="list__item">Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
         </div>
         <div class="about__stats">
@@ -132,40 +132,40 @@
           </li>
         </ul>
       </section>
-
-      <section class="map">
-        <div class="container">
-          <div class="map__address">
-            <h4 class="text-xl">NЁRDS DESIGN STUDIO</h4>
-            <p class="text-gray">191186, Санкт-Петербург,
-              ул. Б. Конюшенная, д. 19/8</p>
-            <p class="address__phone">тел. +7 (812) 275-75-75</p>
-            <button class="btn">Напишите нам</button>
-          </div>
-          <div class="form">
-            <button type="button">Закрыть</button>
-            <p class="text-3xl">Напишите нам</p>
-            <form class="form__user" action="https://echo.htmlacademy.ru" method="POST">
-            <p>
-              <label for="user__name">Ваше имя:</label>
-              <input type="text" name="name" id="user__name" class="form__name" placeholder="Имя Фамилия">
-            </p>
-            <p>
-              <label for="user__email">Ваш e-mail:</label>
-              <input type="text" name="e-mail" id="user__email" class="form__email" placeholder="email@example.com">
-            </p>
-            <p>
-              <label for="user__text">Текст письма:</label>
-              <textarea name="message" id="user__text" cols="60" rows="5" class="form__text" placeholder="В свободной форме">
-              </textarea>
-            </p>
-            <button type="submit" class="btn btn--lg">Отправить</button>
-            </form>
-          </div>
-        </div>
-      </section>
-
     </div>
+
+    <section class="map">
+      <div class="map__container">
+        <div class="map__address">
+          <h4 class="text-xl">NЁRDS DESIGN STUDIO</h4>
+          <p class="text-gray">191186, Санкт-Петербург,<br>
+            ул. Б. Конюшенная, д. 19/8</p>
+          <p class="address__phone">тел. +7 (812) 275-75-75</p>
+          <button class="btn">Напишите нам</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="form">
+      <button type="button">Закрыть</button>
+      <p class="text-3xl">Напишите нам</p>
+      <form class="form__user" action="https://echo.htmlacademy.ru" method="POST">
+      <p>
+        <label for="user__name">Ваше имя:</label>
+        <input type="text" name="name" id="user__name" class="form__name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="user__email">Ваш e-mail:</label>
+        <input type="text" name="e-mail" id="user__email" class="form__email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="user__text">Текст письма:</label>
+        <textarea name="message" id="user__text" cols="60" rows="5" class="form__text" placeholder="В свободной форме">
+        </textarea>
+      </p>
+      <button type="submit" class="btn btn--lg">Отправить</button>
+      </form>
+    </section>
   </main>
 
   <footer class="footer">
