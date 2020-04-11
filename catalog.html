@@ -8,19 +8,21 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
-      <a class="header__logo logo" href="index.html">
-        <img class="logo__img" src="img/nerds-logo.svg" alt="Логотип Nёrds">
-      </a>
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">Студия</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Клиенты</a></li>
-          <li class="nav__item"><a class="nav__link nav__link--current" href="#">Магазин</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-          <li class="nav__item nav__item--cart"><a class="nav__link" href="#">Корзинка</a></li>
-        </ul>
-      </nav>
+    <div class="flex">
+      <div class="container">
+        <a class="header__logo logo" href="index.html">
+          <img class="logo__img" src="img/nerds-logo.svg" alt="Логотип Nёrds">
+        </a>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#">Студия</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Клиенты</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--current" href="#">Магазин</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+            <li class="nav__item nav__item--cart"><a class="nav__link" href="#">Корзинка</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -31,74 +33,222 @@
       </div>
     </div>
 
-    <aside class="sidebar">
-      <!-- здесь будет форма фильтра -->
-    </aside>
+    <div class="container">
+      <aside class="sidebar">
+        <form class="sidebar__filter" method="GET" action="https://echo.htmlacademy.ru">
+        <fieldset class="price-filter">
+          <legend class="text-xl uppercase">Стоимость:</legend>
+          <input type="range" min="0" max="15000">
+          <span>От</span>
+          <input class="price__input" type="text" name="filter" id="min">
+          <span>До</span>
+          <input class="price__input" type="text" name="filter" id="max">
+        </fieldset>
+        <fieldset class="grid">
+          <legend class="text-xl uppercase">Сетка:</legend>
+          <ul class="radio">
+            <li class="radio__item">
+              <input class="radio__btn" type="radio" name="grid__radio" value="item-1" id="item-1" checked>
+              <label class="radio__text" for="item-1">Адаптивная</label>
+            </li>
+            <li class="radio__item">
+              <input class="radio__btn" type="radio" name="grid__radio" value="item-2" id="item-2">
+              <label class="radio__text" for="item-2">Фиксированная</label>
+            </li>
+            <li class="radio__item">
+              <input class="radio__btn" type="radio" name="grid__radio" value="item-3" id="item-3">
+              <label class="radio__text" for="item-3">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="features">
+          <legend class="text-xl uppercase">Особенности:</legend>
+          <ul class="checkboxes">
+            <li class="checkboxes__item">
+              <label class="checkbox__label">
+                <input class="checkbox__btn" type="checkbox" checked>
+                <span class="checkbox__image"></span>
+                Слайдер
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <label class="checkbox__label">
+                <input class="checkbox__btn" type="checkbox">
+                <span class="checkbox__image"></span>
+                Блок преимуществ
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <label class="checkbox__label">
+                <input class="checkbox__btn" type="checkbox" checked>
+                <span class="checkbox__image"></span>
+                Новости
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <label class="checkbox__label">
+                <input class="checkbox__btn" type="checkbox">
+                <span class="checkbox__image"></span>
+                Галерея
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <label class="checkbox__label">
+                <input class="checkbox__btn" type="checkbox">
+                <span class="checkbox__image"></span>
+                Корзина
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="btn aside-btn" type="submit">Показать</button>
+        </form>
+      </aside>
 
-    <section class="catalog">
-      <!-- здесь будет форма сортировки товаров -->
-      <ul class="catalog__list">
-        <li class="catalog__item">
-          <h3 class="text-xl">Sedona</h3>
-        </li>
-      </ul>
-    </section>
+      <section class="catalog">
+        <!-- здесь будет форма сортировки товаров -->
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <div class="browser"></div>
+            <div class="catalog__card">
+              <img src="img/img-sedona.jpeg" alt="Изображение сайта Sedona">
+            </div>
+            <div class="catalog__price">
+              <h3 class="text-xl uppercase">Sedona</h3>
+              <p>Информационный сайт <br>
+               для туристов</p>
+              <a class="btn btn-price" href="#">9 900 Руб.</a>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <div class="browser"></div>
+            <div class="catalog__card">
+              <img src="img/img-pink.jpeg" alt="Изображение сайта Pink">
+            </div>
+            <div class="catalog__price">
+              <h3 class="text-xl uppercase">Pink app</h3>
+              <p>Продуктовый лендинг <br>
+               приложения для iOS и Android</p>
+              <a class="btn btn-price" href="#">9 900 Руб.</a>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <div class="browser"></div>
+            <div class="catalog__card">
+              <img src="img/img-barbershop.jpeg" alt="Изображение сайта Barbershop">
+            </div>
+            <div class="catalog__price">
+              <h3 class="text-xl uppercase">Barbershop</h3>
+              <p>Сайт салона красоты.  <br>
+               Для мужчин, да.</p>
+              <a class="btn btn-price" href="#">9 900 Руб.</a>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <div class="browser"></div>
+            <div class="catalog__card">
+              <img src="img/img-mishka.jpeg" alt="Изображение сайта Mishka">
+            </div>
+            <div class="catalog__price">
+              <h3 class="text-xl uppercase">Mishka</h3>
+              <p>Интернет-магазин <br>
+               вязанных игрушек</p>
+              <a class="btn btn-price" href="#">9 900 Руб.</a>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <div class="browser"></div>
+            <div class="catalog__card">
+              <img src="img/img-aplus.jpeg" alt="Изображение сайта A Plus">
+            </div>
+            <div class="catalog__price">
+              <h3 class="text-xl uppercase">A Plus</h3>
+              <p>Лендинг курсов повышения <br>
+               квалификации</p>
+              <a class="btn btn-price" href="#">9 900 Руб.</a>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <div class="browser"></div>
+            <div class="catalog__card">
+              <img src="img/img-kvast.jpeg" alt="Изображение сайта Kvast">
+            </div>
+            <div class="catalog__price">
+              <h3 class="text-xl uppercase">Kvast</h3>
+              <p>Промо-сайт производителя <br>
+               крафтого кваса</p>
+              <a class="btn btn-price" href="#">9 900 Руб.</a>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="pagination-list">
+          <li class="pagination__item btn pagination__item--curent"><a class="pagination__link">1</a></li>
+          <li class="pagination__item btn"><a class="pagination__link" href="#">2</a></li>
+          <li class="pagination__item btn"><a class="pagination__link" href="#">3</a></li>
+          <li class="pagination__item btn"><a class="pagination__link" href="#">Следующая</a></li>
+        </ul>
+      </section>
+    </div>
 
     <section class="map">
-      <div class="container">
+      <div class="map__container">
         <div class="map__address">
           <h4 class="text-xl">NЁRDS DESIGN STUDIO</h4>
-          <p class="text-gray">191186, Санкт-Петербург,
+          <p class="text-gray">191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8</p>
-          <p class="address__phone">тел. +7 (812) 275-75-75</p>
+          <p class="text-gray">тел. +7 (812) 275-75-75</p>
           <button class="btn">Напишите нам</button>
         </div>
-        <div class="form">
-          <button type="button">Закрыть</button>
-          <p class="text-3xl">Напишите нам</p>
-          <form class="form__user" action="https://echo.htmlacademy.ru" method="POST">
-          <p>
-            <label for="user__name">Ваше имя:</label>
-            <input type="text" name="name" id="user__name" class="form__name" placeholder="Имя Фамилия">
-          </p>
-          <p>
-            <label for="user__email">Ваш e-mail:</label>
-            <input type="text" name="e-mail" id="user__email" class="form__email" placeholder="email@example.com">
-          </p>
-          <p>
-            <label for="user__text">Текст письма:</label>
-            <textarea name="message" id="user__text" cols="60" rows="5" class="form__text" placeholder="В свободной форме">
-            </textarea>
-          </p>
-          <button type="submit" class="btn btn--lg">Отправить</button>
-          </form>
-        </div>
       </div>
+    </section>
+
+    <section class="popup">
+      <button type="button">Закрыть</button>
+      <p class="text-3xl">Напишите нам</p>
+      <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
+      <p>
+        <label for="user__name">Ваше имя:</label>
+        <input type="text" name="name" id="user__name" class="form__input" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="user__email">Ваш e-mail:</label>
+        <input type="text" name="e-mail" id="user__email" class="form__input" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="user__text">Текст письма:</label>
+        <textarea name="message" id="user__text" cols="60" rows="5" class="form__input" placeholder="В свободной форме">
+        </textarea>
+      </p>
+      <button type="submit" class="btn btn--lg">Отправить</button>
+      </form>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <ul class="footer__socials socials">
-        <li class="socials__item">
-          <a class="socials__link" href="https://www.vk.com">
-            <img class="socials__logo" src="img/vk-icon.svg" alt="vk">
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="https://www.facebook.com">
-            <img class="socials__logo" src="img/fb-icon.svg" alt="facebook">
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="https://www.instagram.com">
-            <img class="socials__logo" src="img/insta-icon.svg" alt="instagram">
-          </a>
-        </li>
-      </ul>
-      <div class="footer__text">
-        <p class="text-3xl text-bold">Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+      <div class="footer__flex">
+        <ul class="footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link" href="https://www.vk.com">
+              <img class="socials__logo" src="img/vk-icon.svg" alt="vk">
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="https://www.facebook.com">
+              <img class="socials__logo" src="img/fb-icon.svg" alt="facebook">
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="https://www.instagram.com">
+              <img class="socials__logo" src="img/insta-icon.svg" alt="instagram">
+            </a>
+          </li>
+        </ul>
+        <div class="footer__text">
+          <p class="text-xl text-bold">Давайте дружить, это выгодно!</p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </div>
     </div>
   </footer>
