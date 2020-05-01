@@ -8,202 +8,210 @@
 </head>
 <body>
   <header class="header">
-    <div class="flex">
-      <div class="container">
-        <a class="header__logo logo" href="index.html">
+    <div class="container">
+      <div class="header__menu row">
+        <a class="header__logo logo col-2" href="index.html">
           <img class="logo__img" src="img/nerds-logo.svg" alt="Логотип Nёrds">
         </a>
-        <nav class="header__nav nav">
+        <nav class="header__nav nav col-5@s col-6@m col-5@l">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#">Студия</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Клиенты</a></li>
             <li class="nav__item"><a class="nav__link nav__link--current" href="#">Магазин</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-            <li class="nav__item nav__item--cart"><a class="nav__link" href="#">Корзинка</a></li>
           </ul>
         </nav>
+        <div class="header__cart col-2@s"><a class="cart" href="#">Корзинка</a></div>
       </div>
     </div>
   </header>
 
   <main class="content">
     <div class="title">
-      <div class="container text-center">
-        <h1 class="text-3xl">Магазин готовых шаблонов</h1>
+      <div class="container">
+        <div class="title__text row">
+          <h1 class="text-3xl col-12">Магазин готовых шаблонов</h1>
+        </div>
       </div>
     </div>
 
     <div class="container">
-      <aside class="sidebar">
-        <form class="sidebar__filter" method="GET" action="https://echo.htmlacademy.ru">
-        <fieldset class="price-filter">
-          <legend class="text-xl uppercase">Стоимость:</legend>
-          <input type="range" min="0" max="15000">
-          <span>От</span>
-          <input class="price__input" type="text" name="filter" id="min">
-          <span>До</span>
-          <input class="price__input" type="text" name="filter" id="max">
-        </fieldset>
-        <fieldset class="grid">
-          <legend class="text-xl uppercase">Сетка:</legend>
-          <ul class="radio">
-            <li class="radio__item">
-              <input class="radio__btn" type="radio" name="grid__radio" value="item-1" id="item-1" checked>
-              <label class="radio__text" for="item-1">Адаптивная</label>
+      <div class="row">
+        <aside class="sidebar col-3@m col-4@m col-4@l">
+          <form class="form" method="GET" action="https://echo.htmlacademy.ru">
+            <fieldset class="form__label">
+              <legend class="text-lg uppercase">Стоимость:</legend>
+              <input class="range" type="range" min="0" max="15000">
+              <span>От</span>
+              <input class="form__input--bg-gray" type="text" name="filter"   id="min">
+              <span>До</span>
+              <input class="form__input--bg-gray" type="text" name="filter"   id="max">
+            </fieldset>
+            <fieldset class="form__label">
+              <legend class="text-lg uppercase">Сетка:</legend>
+              <ul class="radio">
+                <li class="radio__item">
+                  <input class="radio__btn" type="radio" name="grid__radio"   value="item-1" id="item-1" checked>
+                  <label class="radio__text" for="item-1">Адаптивная</label>
+                </li>
+                <li class="radio__item">
+                  <input class="radio__btn" type="radio" name="grid__radio"   value="item-2" id="item-2">
+                  <label class="radio__text" for="item-2">Фиксированная</label>
+                </li>
+                <li class="radio__item">
+                  <input class="radio__btn" type="radio" name="grid__radio"   value="item-3" id="item-3">
+                  <label class="radio__text" for="item-3">Резиновая</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__label">
+              <legend class="text-lg uppercase">Особенности:</legend>
+              <ul class="checkboxes">
+                <li class="checkboxes__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__btn" type="checkbox" checked>
+                    <span class="checkbox__image"></span>
+                    Слайдер
+                  </label>
+                </li>
+                <li class="checkboxes__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__btn" type="checkbox">
+                    <span class="checkbox__image"></span>
+                    Блок преимуществ
+                  </label>
+                </li>
+                <li class="checkboxes__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__btn" type="checkbox" checked>
+                    <span class="checkbox__image"></span>
+                    Новости
+                  </label>
+                </li>
+                <li class="checkboxes__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__btn" type="checkbox">
+                    <span class="checkbox__image"></span>
+                    Галерея
+                  </label>
+                </li>
+                <li class="checkboxes__item">
+                  <label class="checkbox__label">
+                    <input class="checkbox__btn" type="checkbox">
+                    <span class="checkbox__image"></span>
+                    Корзина
+                  </label>
+                </li>
+              </ul>
+              <button class="btn btn--gray btn--small" type="submit">Показать</button>
+            </fieldset>
+          </form>
+        </aside>
+
+        <section class="catalog col-12 col-8@m">
+          <!-- здесь будет форма сортировки товаров -->
+          <ul class="catalog__list row">
+            <li class="catalog__item col-6@xs">
+              <div class="browser"></div>
+              <div class="catalog__card">
+                <img src="img/img-sedona.jpeg" alt="Изображение сайта Sedona">
+              </div>
+              <div class="catalog__price">
+                <h3 class="text-xl uppercase">Sedona</h3>
+                <p>Информационный сайт <br>
+                 для туристов</p>
+                <a class="btn btn-price" href="#">9 900 Руб.</a>
+              </div>
             </li>
-            <li class="radio__item">
-              <input class="radio__btn" type="radio" name="grid__radio" value="item-2" id="item-2">
-              <label class="radio__text" for="item-2">Фиксированная</label>
+            <li class="catalog__item col-6@xs">
+              <div class="browser"></div>
+              <div class="catalog__card">
+                <img src="img/img-pink.jpeg" alt="Изображение сайта Pink">
+              </div>
+              <div class="catalog__price">
+                <h3 class="text-xl uppercase">Pink app</h3>
+                <p>Продуктовый лендинг <br>
+                 приложения для iOS и Android</p>
+                <a class="btn btn-price" href="#">9 900 Руб.</a>
+              </div>
             </li>
-            <li class="radio__item">
-              <input class="radio__btn" type="radio" name="grid__radio" value="item-3" id="item-3">
-              <label class="radio__text" for="item-3">Резиновая</label>
+            <li class="catalog__item col-6@xs">
+              <div class="browser"></div>
+              <div class="catalog__card">
+                <img src="img/img-barbershop.jpeg" alt="Изображение сайта Barbershop">
+              </div>
+              <div class="catalog__price">
+                <h3 class="text-xl uppercase">Barbershop</h3>
+                <p>Сайт салона красоты.  <br>
+                 Для мужчин, да.</p>
+                <a class="btn btn-price" href="#">9 900 Руб.</a>
+              </div>
+            </li>
+            <li class="catalog__item col-6@xs">
+              <div class="browser"></div>
+              <div class="catalog__card">
+                <img src="img/img-mishka.jpeg" alt="Изображение сайта Mishka">
+              </div>
+              <div class="catalog__price">
+                <h3 class="text-xl uppercase">Mishka</h3>
+                <p>Интернет-магазин <br>
+                 вязанных игрушек</p>
+                <a class="btn btn-price" href="#">9 900 Руб.</a>
+              </div>
+            </li>
+            <li class="catalog__item col-6@xs">
+              <div class="browser"></div>
+              <div class="catalog__card">
+                <img src="img/img-aplus.jpeg" alt="Изображение сайта A Plus">
+              </div>
+              <div class="catalog__price">
+                <h3 class="text-xl uppercase">A Plus</h3>
+                <p>Лендинг курсов повышения <br>
+                 квалификации</p>
+                <a class="btn btn-price" href="#">9 900 Руб.</a>
+              </div>
+            </li>
+            <li class="catalog__item col-6@xs">
+              <div class="browser"></div>
+              <div class="catalog__card">
+                <img src="img/img-kvast.jpeg" alt="Изображение сайта Kvast">
+              </div>
+              <div class="catalog__price">
+                <h3 class="text-xl uppercase">Kvast</h3>
+                <p>Промо-сайт производителя <br>
+                 крафтого кваса</p>
+                <a class="btn btn-price" href="#">9 900 Руб.</a>
+              </div>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="features">
-          <legend class="text-xl uppercase">Особенности:</legend>
-          <ul class="checkboxes">
-            <li class="checkboxes__item">
-              <label class="checkbox__label">
-                <input class="checkbox__btn" type="checkbox" checked>
-                <span class="checkbox__image"></span>
-                Слайдер
-              </label>
-            </li>
-            <li class="checkboxes__item">
-              <label class="checkbox__label">
-                <input class="checkbox__btn" type="checkbox">
-                <span class="checkbox__image"></span>
-                Блок преимуществ
-              </label>
-            </li>
-            <li class="checkboxes__item">
-              <label class="checkbox__label">
-                <input class="checkbox__btn" type="checkbox" checked>
-                <span class="checkbox__image"></span>
-                Новости
-              </label>
-            </li>
-            <li class="checkboxes__item">
-              <label class="checkbox__label">
-                <input class="checkbox__btn" type="checkbox">
-                <span class="checkbox__image"></span>
-                Галерея
-              </label>
-            </li>
-            <li class="checkboxes__item">
-              <label class="checkbox__label">
-                <input class="checkbox__btn" type="checkbox">
-                <span class="checkbox__image"></span>
-                Корзина
-              </label>
-            </li>
+
+          <ul class="pagination-list">
+            <li class="pagination__item btn pagination__item--curent"><a class="pagination__link">1</a></li>
+            <li class="pagination__item btn"><a class="pagination__link" href="#">2</a></li>
+            <li class="pagination__item btn"><a class="pagination__link" href="#">3</a></li>
+            <li class="pagination__item btn"><a class="pagination__link" href="#">Следующая</a></li>
           </ul>
-        </fieldset>
-        <button class="btn aside-btn" type="submit">Показать</button>
-        </form>
-      </aside>
-
-      <section class="catalog">
-        <!-- здесь будет форма сортировки товаров -->
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <div class="browser"></div>
-            <div class="catalog__card">
-              <img src="img/img-sedona.jpeg" alt="Изображение сайта Sedona">
-            </div>
-            <div class="catalog__price">
-              <h3 class="text-xl uppercase">Sedona</h3>
-              <p>Информационный сайт <br>
-               для туристов</p>
-              <a class="btn btn-price" href="#">9 900 Руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <div class="browser"></div>
-            <div class="catalog__card">
-              <img src="img/img-pink.jpeg" alt="Изображение сайта Pink">
-            </div>
-            <div class="catalog__price">
-              <h3 class="text-xl uppercase">Pink app</h3>
-              <p>Продуктовый лендинг <br>
-               приложения для iOS и Android</p>
-              <a class="btn btn-price" href="#">9 900 Руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <div class="browser"></div>
-            <div class="catalog__card">
-              <img src="img/img-barbershop.jpeg" alt="Изображение сайта Barbershop">
-            </div>
-            <div class="catalog__price">
-              <h3 class="text-xl uppercase">Barbershop</h3>
-              <p>Сайт салона красоты.  <br>
-               Для мужчин, да.</p>
-              <a class="btn btn-price" href="#">9 900 Руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <div class="browser"></div>
-            <div class="catalog__card">
-              <img src="img/img-mishka.jpeg" alt="Изображение сайта Mishka">
-            </div>
-            <div class="catalog__price">
-              <h3 class="text-xl uppercase">Mishka</h3>
-              <p>Интернет-магазин <br>
-               вязанных игрушек</p>
-              <a class="btn btn-price" href="#">9 900 Руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <div class="browser"></div>
-            <div class="catalog__card">
-              <img src="img/img-aplus.jpeg" alt="Изображение сайта A Plus">
-            </div>
-            <div class="catalog__price">
-              <h3 class="text-xl uppercase">A Plus</h3>
-              <p>Лендинг курсов повышения <br>
-               квалификации</p>
-              <a class="btn btn-price" href="#">9 900 Руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item">
-            <div class="browser"></div>
-            <div class="catalog__card">
-              <img src="img/img-kvast.jpeg" alt="Изображение сайта Kvast">
-            </div>
-            <div class="catalog__price">
-              <h3 class="text-xl uppercase">Kvast</h3>
-              <p>Промо-сайт производителя <br>
-               крафтого кваса</p>
-              <a class="btn btn-price" href="#">9 900 Руб.</a>
-            </div>
-          </li>
-        </ul>
-
-        <ul class="pagination-list">
-          <li class="pagination__item btn pagination__item--curent"><a class="pagination__link">1</a></li>
-          <li class="pagination__item btn"><a class="pagination__link" href="#">2</a></li>
-          <li class="pagination__item btn"><a class="pagination__link" href="#">3</a></li>
-          <li class="pagination__item btn"><a class="pagination__link" href="#">Следующая</a></li>
-        </ul>
-      </section>
+        </section>
+      </div>
     </div>
 
     <section class="map">
-      <div class="map__container">
-        <div class="map__address">
-          <h4 class="text-xl">NЁRDS DESIGN STUDIO</h4>
-          <p class="text-gray">191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8</p>
-          <p class="text-gray">тел. +7 (812) 275-75-75</p>
-          <button class="btn">Напишите нам</button>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-6@xs col-4@m">
+            <div class="map__address">
+              <h4 class="text-l">NЁRDS DESIGN STUDIO</h4>
+              <p class="text-gray">191186, Санкт-Петербург,<br>
+                ул. Б. Конюшенная, д. 19/8</p>
+              <p class="text-gray">тел. +7 (812) 275-75-75</p>
+              <button class="btn">Напишите нам</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="popup">
+    <!-- <section class="popup">
       <button type="button">Закрыть</button>
       <p class="text-3xl">Напишите нам</p>
       <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
@@ -222,13 +230,13 @@
       </p>
       <button type="submit" class="btn btn--lg">Отправить</button>
       </form>
-    </section>
+    </section> -->
   </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__flex">
-        <ul class="footer__socials socials">
+      <div class="row">
+        <ul class="footer__socials socials col-12 col-4@xs">
           <li class="socials__item">
             <a class="socials__link" href="https://www.vk.com">
               <img class="socials__logo" src="img/vk-icon.svg" alt="vk">
@@ -245,8 +253,8 @@
             </a>
           </li>
         </ul>
-        <div class="footer__text">
-          <p class="text-xl text-bold">Давайте дружить, это выгодно!</p>
+        <div class="footer__text col-12 col-8@xs">
+          <p class="footer__title text-xl text-bold">Давайте дружить, это выгодно!</p>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>

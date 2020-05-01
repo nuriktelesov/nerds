@@ -1,0 +1,27 @@
+{
+  "name": "nerds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stylelint.config.js",
+  "dependencies": {
+    "stylelint": "^13.3.2",
+    "stylelint-config-outside-in-order": "^0.0.1",
+    "stylelint-order": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "stylelint 'css/style.css' --fix || echo 'lint faild for some file(s).'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuriktelesov/nerds.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuriktelesov/nerds/issues"
+  },
+  "homepage": "https://github.com/nuriktelesov/nerds#readme"
+}
