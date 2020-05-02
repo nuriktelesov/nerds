@@ -515,6 +515,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .header__logo:hover {
@@ -784,19 +785,16 @@ img {
 
 /* Вплывающее окно */
 .popup {
+  display: none;
   position: fixed;
-  bottom: 50px;
-  left: 50%;
-  z-index: 2;
-  width: 760px;
-  margin-left: -400px;
-  padding: 70px 90px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   color: hsl(0, 0%, 0%);
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 0 30px 50px hsl(0, 0%, 20%);
 }
 
-.popup-overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -807,10 +805,45 @@ img {
   opacity: 0.5;
 }
 
+@keyframes bounce {
+  0% {transform: translate(-50%, -1000px);}
+  70% {transform: translate(-50%, 30px);}
+  90% {transform: translate(-50%, 10px);}
+  100% {transform: translate(-50%, -50%);}
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+.popup__error {
+  animation-name: shake;
+  animation-duration: 0.5s;
+}
+
+.popup--show {
+  display: block;
+}
+
+.popup__wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+  animation-name: bounce;
+  animation-duration: 0.8s;
+}
+
 .popup__close {
   position: absolute;
-  top: 75px;
-  right: 90px;
+  top: 10px;
+  right: 10px;
   width: 26px;
   height: 26px;
   background-color: transparent;
@@ -862,6 +895,10 @@ img {
   justify-content: space-between;
 }
 
+.popup__btn {
+  margin: 0;
+}
+
 @media (min-width: 640px) {
   body { font-size: 14px; }
 
@@ -892,6 +929,16 @@ img {
   .clients__item:nth-child(2) { margin-bottom: 0; }
 
   .socials { align-items: center; }
+
+  .popup__wraper {
+    width: 550px;
+    padding: 40px;
+  }
+
+  .popup__close {
+    top: 30px;
+    right: 50px;
+  }
 
   .col-1\@xs {
     flex: 0 0 calc((1/12) * 100%);
@@ -1030,6 +1077,10 @@ img {
   body { font-size: 16px; }
 
   .container { max-width: 740px; }
+
+  .popup__wraper {
+    width: 640px;
+  }
 
   .col-1\@s {
     flex: 0 0 calc((1/12) * 100%);
@@ -1187,6 +1238,16 @@ img {
   .socials__logo {
     max-width: 30px;
     max-height: 30px;
+  }
+
+  .popup__wraper {
+    width: 760px;
+    padding: 50px;
+  }
+
+  .popup__close {
+    top: 40px;
+    right: 60px;
   }
 
   .col-1\@m {

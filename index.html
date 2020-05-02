@@ -155,7 +155,7 @@
               <p class="text-gray">191186, Санкт-Петербург,<br>
                 ул. Б. Конюшенная, д. 19/8</p>
               <p class="text-gray">тел. +7 (812) 275-75-75</p>
-              <button class="btn">Напишите нам</button>
+              <button class="btn js-write-us">Напишите нам</button>
             </div>
           </div>
         </div>
@@ -191,28 +191,32 @@
     </div>
   </footer>
 
-  <!-- <section class="popup">
-    <button class="popup__close" type="button">Закрыть</button>
-    <p class="popup__title text-2xl col-12">Напишите нам</p>
-    <form class="popup__form row" action="https://echo.htmlacademy.ru" method="POST">
-      <p class="popup__item col-6">
-        <label for="user__name">Ваше имя:</label>
-        <input type="text" name="name" id="user__name" class="form__input" placeholder="Имя Фамилия">
-      </p>
-      <p class="popup__item col-6">
-        <label for="user__email">Ваш e-mail:</label>
-        <input type="text" name="e-mail" id="user__email" class="form__input" placeholder="email@example.com">
-      </p>
-      <p class="popup__item col-12">
-        <label for="user__text">Текст письма:</label>
-        <textarea name="message" id="user__text" cols="50" rows="5" class="form__input form__input--text" placeholder="В свободной форме">
-        </textarea>
-      </p>
-      <div class="col-5">
-        <button type="submit" class="btn btn--lg">Отправить</button>
-      </div>
-    </form>
+  <section class="popup">
+    <div class="overlay"></div>
+    <div class="popup__wraper">
+      <button class="popup__close" type="button">Закрыть</button>
+      <p class="popup__title text-2xl col-12">Напишите нам</p>
+      <form class="popup__form row" action="https://echo.htmlacademy.ru" method="POST">
+        <p class="popup__item col-6">
+          <label for="user__name">Ваше имя:</label>
+          <input type="text" name="name" id="user__name" class="form__input" placeholder="Имя Фамилия">
+        </p>
+        <p class="popup__item col-6">
+          <label for="user__email">Ваш e-mail:</label>
+          <input type="text" name="e-mail" id="user__email" class="form__input" placeholder="email@example.com">
+        </p>
+        <p class="popup__item col-12">
+          <label for="user__text">Текст письма:</label>
+          <textarea name="message" id="user__text" cols="50" rows="6" class="form__input form__input--text" placeholder="В свободной форме"></textarea>
+        </p>
+        <div class="col-5">
+          <button type="submit" class="popup__btn btn btn--lg">Отправить</button>
+        </div>
+      </form>
+    </div>
   </section>
-  <div class="popup-overlay"></div> -->
+
+  <script src="js/popup.js"></script>
+
 </body>
 </html>

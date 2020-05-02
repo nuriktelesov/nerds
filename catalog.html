@@ -211,26 +211,29 @@
       </div>
     </section>
 
-    <!-- <section class="popup">
-      <button type="button">Закрыть</button>
+    <section class="popup">
+      <button class="popup__close" type="button">Закрыть</button>
       <p class="text-3xl">Напишите нам</p>
-      <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
-      <p>
-        <label for="user__name">Ваше имя:</label>
-        <input type="text" name="name" id="user__name" class="form__input" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="user__email">Ваш e-mail:</label>
-        <input type="text" name="e-mail" id="user__email" class="form__input" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="user__text">Текст письма:</label>
-        <textarea name="message" id="user__text" cols="60" rows="5" class="form__input" placeholder="В свободной форме">
-        </textarea>
-      </p>
-      <button type="submit" class="btn btn--lg">Отправить</button>
+      <form class="popup__form row" action="https://echo.htmlacademy.ru" method="POST">
+       <p class="popup__item col-6">
+         <label for="user__name">Ваше имя:</label>
+         <input type="text" name="name" id="user__name" class="form__input"  placeholder="Имя Фамилия">
+       </p>
+       <p class="popup__item col-6">
+         <label for="user__email">Ваш e-mail:</label>
+         <input type="text" name="e-mail" id="user__email" class="form__input"  placeholder="email@example.com">
+       </p>
+       <p class="popup__item col-12">
+         <label for="user__text">Текст письма:</label>
+         <textarea name="message" id="user__text" cols="50" rows="5"  class="form__input" placeholder="В свободной форме">
+         </textarea>
+       </p>
+       <div class="col-5">
+         <button type="submit" class="btn btn--lg">Отправить</button>
+       </div>
       </form>
-    </section> -->
+    </section>
+    <div class="overlay"></div>
   </main>
 
   <footer class="footer">
